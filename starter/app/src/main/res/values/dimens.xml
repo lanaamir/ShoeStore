@@ -2,4 +2,5 @@
 <resources>
     <dimen name="email_margin_top">200dp</dimen>
     <dimen name="loginbtn_margin_top">50dp</dimen>
+    <dimen name="next_btn_margin_top">20dp</dimen>
 </resources>

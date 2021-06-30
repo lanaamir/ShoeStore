@@ -5,4 +5,6 @@
     <string name="login_btn">LOGIN</string>
     <string name="password">Password</string>
     <string name="e_mail">E-Mail</string>
+    <string name="welcome_message">WELCOME TO OUR AWESEOME SHOE STORE!!</string>
+    <string name="next">next</string>
 </resources>

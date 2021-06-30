@@ -19,7 +19,7 @@
         android:name="com.udacity.shoestore.scenes.welcome.WelcomeFragment"
         android:label="WelcomeFragment">
         <action
-            android:id="@+id/action_welcome_to_instructions"
+            android:id="@+id/action_welcome"
             app:destination="@id/instructions_fragment"
             app:popUpTo="@id/welcome_fragment"
             app:popUpToInclusive="false" />
@@ -29,7 +29,7 @@
         android:name="com.udacity.shoestore.scenes.instructions.InstructionFragment"
         android:label="InstructionsFragment">
         <action
-            android:id="@+id/action_instructions_to_shoe_listings"
+            android:id="@+id/action_to_shoe_list"
             app:destination="@id/shoe_list_fragment"
             app:popUpTo="@id/login_fragment"
             app:popUpToInclusive="false" />
