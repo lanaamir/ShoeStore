@@ -7,4 +7,5 @@
     <string name="e_mail">E-Mail</string>
     <string name="welcome_message">WELCOME TO OUR AWESEOME SHOE STORE!!</string>
     <string name="next">next</string>
+    <string name="instruction_txt">Insert instructions here!!!!</string>
 </resources>
