@@ -5,28 +5,34 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.udacity.shoestore.R
-import kotlinx.android.synthetic.main.fragment_details.view.*
+import com.udacity.shoestore.databinding.FragmentDetailsBinding
 
 class DetailsFragment : Fragment() {
+
+    lateinit var binding: FragmentDetailsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_details, container, false)
-        view.back_btn.setOnClickListener {
+    ): View {
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_details,
+            container, false
+        )
+        binding.backBtn.setOnClickListener {
             NavHostFragment.findNavController(this)
                 .navigate(DetailsFragmentDirections.actionShoeDetailsToShoeListings())
         }
 
-        view.buy_btn.setOnClickListener {
+        binding.buyBtn.setOnClickListener {
             Toast.makeText(context, "Item bought", Toast.LENGTH_LONG).show()
         }
 
-        return view
+        return binding.root
     }
 }

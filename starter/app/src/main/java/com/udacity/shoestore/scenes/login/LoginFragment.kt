@@ -4,22 +4,29 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.udacity.shoestore.R
-import kotlinx.android.synthetic.main.fragment_login.view.*
+import com.udacity.shoestore.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
+
+    lateinit var binding: FragmentLoginBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_login, container, false)
-        view.login.setOnClickListener {
+    ): View {
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_login,
+            container, false
+        )
+        binding.login.setOnClickListener {
             NavHostFragment.findNavController(this)
                 .navigate(LoginFragmentDirections.actionLoginToWelcome())
         }
-        return view
+        return binding.root
     }
 }
